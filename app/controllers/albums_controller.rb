@@ -5,13 +5,20 @@ class AlbumsController < ApplicationController
   def index
   end
   
+  def new
+    @album = Album.new
+  end
+  
+  
   private
   def set_layout
+    l = "application"
     if action_name == "index"
-      return "albums_layout"
+      l = "albums_layout"
     end
     if action_name == "show"
-      return "album_layout"
+      l = "album_layout"
     end
+    return l
   end
 end

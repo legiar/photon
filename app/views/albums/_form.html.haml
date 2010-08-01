@@ -1,0 +1,10 @@
+= form_for @album do |f|
+  = render "shared/error_messages", :target => @album
+  %p
+    Nom : 
+    = f.text_field :name
+  %p
+    Description :
+  %p
+    = f.text_area :description, :rows => 6, :cols => 60
+  %p= f.submit t(:button_validate)

@@ -26,8 +26,11 @@ fr:
   title_users_edit: "Editer l'utilisateur"
   title_users_show: "Voir l'utilisateur"
   
+  title_albums_new: "Nouvel album"
+  
   button_save: "Sauver"
   button_add: "Ajouter"
+  button_validate: "Valider"
   
   text_delete: "Supprimer"
   text_confirm_sure: "Êtes-vous sûr ?"
