@@ -4,4 +4,7 @@
     \-
     = t(:title_application_index)
 
-Liste des albums
+%ul
+  - @albums.each do |album|
+    %li
+      = album.name
