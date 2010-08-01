@@ -1,4 +1,4 @@
-class GallerysController < ApplicationController
+class AlbumsController < ApplicationController
   layout :set_layout
   
   def index
@@ -7,7 +7,7 @@ class GallerysController < ApplicationController
   private
   def set_layout
     if action_name == "index"
-      return "gallerys_layout"
+      return "albums_layout"
     end
     if action_name == "show"
       return "album_layout"
