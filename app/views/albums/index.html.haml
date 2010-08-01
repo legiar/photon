@@ -4,7 +4,10 @@
     \-
     = t(:title_application_index)
 
-%ul
-  - @albums.each do |album|
-    %li
-      = album.name
+- @albums.each do |album|
+  .albumsListThumb
+    %p
+      %a{:href => album_path(album)}
+        img
+        %br
+        %span= album.name

@@ -53,6 +53,19 @@ html {
 #content #main #albumList {
 }
 
+#content #main .albumsListThumb {
+	border-style: solid;
+	border-color: #dddddd;
+	border-width: 1px;
+	width: 100px;
+	height: 100px;
+	font-size: 12px;
+}
+
+#content #main .albumsListThumb a {
+	text-decoration: none;
+}
+
 #content #footer {
 	text-align: center;
 	padding-top: 5px;
