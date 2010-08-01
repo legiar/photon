@@ -1,0 +1,15 @@
+!!! Strict
+%html
+  %head
+    = render :partial => "shared/head"
+  
+  %body
+    #content
+      #header
+        = render :partial => 'shared/header'
+      #main
+        #imageList
+          = yield
+          
+      #footer
+        = render :partial => 'shared/footer'
