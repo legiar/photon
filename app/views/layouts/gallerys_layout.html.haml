@@ -6,11 +6,7 @@
   %body
     #content
       #header
-        #title
-          = link_to "Photon", root_path
-        #links
-          blah blah blah
-      
+        = render :partial => 'shared/header'
       #main
         #albumList
           = yield
