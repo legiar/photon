@@ -20,6 +20,10 @@ html {
 	font-size: 3em;
 }
 
+#content #header #title a {
+	text-decoration: none;
+}
+
 #content #header #links {
 	padding-right: 5px;
 	padding-left: 5px;
