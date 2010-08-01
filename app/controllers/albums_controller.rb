@@ -17,6 +17,7 @@ class AlbumsController < ApplicationController
   end
   
   def create
+    params[:album][:user] = current_user
     @album = Album.new(params[:album])
     if @album.save
       flash[:notice] = t(:albums_create_ok)
@@ -31,6 +32,7 @@ class AlbumsController < ApplicationController
   end
   
   def update
+    params[:album][:user] = current_user
     @album = Album.find(params[:id])
     if @album.update_attributes(params[:album])
       flash[:notice] = t(:albums_update_ok)
