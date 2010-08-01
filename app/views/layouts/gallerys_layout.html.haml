@@ -1,0 +1,18 @@
+!!! Strict
+%html
+  %head
+    = render :partial => "shared/head"
+  
+  %body
+    #content
+      #header
+        #title  Photon
+        #links
+          blah blah blah
+      
+      #main
+        #albumList
+          = yield
+          
+      #footer
+        = render :partial => 'shared/footer'
