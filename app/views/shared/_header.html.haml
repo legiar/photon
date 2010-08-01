@@ -4,6 +4,12 @@
   %ul
     %li= link_to t(:header_tab_home), root_path
     - if current_user
+      %li
+        Connected as
+        = current_user.login
+        - permitted_to? :create, :albums do
+          %a{:title => "admin"} (A)
+          %li= link_to t(:header_tab_album_new), {}
       %li= link_to t(:header_tab_account), edit_user_path(current_user)
       %li= link_to t(:header_tab_logout), logout_path
     - else

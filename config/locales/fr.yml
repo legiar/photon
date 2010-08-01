@@ -13,6 +13,7 @@ fr:
   header_tab_login: "Se connecter"
   header_tab_logout: "Se déconnecter"
   header_tab_register: "S'enregistrer"
+  header_tab_album_new: "Nouvel album"
   
   application_name: "Photon"
   
