@@ -33,6 +33,16 @@ html {
 	text-decoration: none;
 }
 
+#content #header #links ul {
+	list-style-type: none;
+}
+
+#content #header #links li {
+	float: left;
+	margin-right: 1.5em;
+	margin-left: 2px;
+}
+
 #content #main {
 	margin-right: auto;
 	margin-left: auto;

@@ -1,0 +1,17 @@
+= content_for :head do
+  %title
+    = t(:title_sessions_login)
+    \-
+    = t(:application_name)
+
+= form_for @user_session do |f|
+  = render "shared/error_messages", :target => @user_session
+  %p
+    = f.label :login
+    %br
+    = f.text_field :login
+  %p
+    = f.label :password
+    %br
+    = f.password_field :password
+  %p= f.submit "Login"

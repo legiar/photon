@@ -1,0 +1,21 @@
+= form_for @user do |f|
+  = render "shared/error_messages", :target => @user
+  %p
+    Login : 
+    = f.text_field :login
+  %p
+    Prénom :
+    = f.text_field :firstname
+  %p
+    Nom :
+    = f.text_field :lastname
+  %p
+    Email :
+    = f.text_field :email
+  %p
+    Mot de passe :
+    = f.password_field :password
+  %p
+    Mot de passe (vérification) :
+    = f.password_field :password_confirmation
+  %p= f.submit "Valider"

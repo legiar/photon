@@ -1,0 +1,27 @@
+= content_for :head do
+  %title
+    = t(:title_users_show)
+    \-
+    = t(:application_name)
+    
+%p
+  %strong
+    Login : 
+  = @user.login
+%p
+  %strong
+    Prénom :
+  = @user.firstname
+%p
+  %strong
+    Nom :
+  = @user.lastname
+%p
+  %strong
+    Email :
+  = @user.email
+
+%p
+  = link_to "Editer", edit_user_path(@user)
+  |
+  = link_to "Détruire", @user, :confirm => 'Etes vous sûr?', :method => :delete

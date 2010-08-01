@@ -4,6 +4,12 @@
     = render :partial => "shared/head"
   
   %body
-    = render :partial => "layouts/default"
-    
-    = render :partial => 'shared/footer'
+    #content
+      #header
+        = render :partial => 'shared/header'
+      #main
+        #default
+          = yield
+          
+      #footer
+        = render :partial => 'shared/footer'

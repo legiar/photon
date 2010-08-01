@@ -1,0 +1,22 @@
+= content_for :head do
+  %title
+    = t(:title_users_list)
+    \-
+    = t(:application_name)
+
+%table
+  %tr
+    %th Login
+    %th Prénom
+    %th Nom
+    %th Email
+  - for user in @users
+    %tr
+      %td= link_to user.login, user
+      %td=h user.firstname
+      %td=h user.lastname
+      %td=h user.email
+      %td= link_to "Edit", edit_user_path(user)
+      %td= link_to "Destroy", user, :confirm => 'Etes vous sûr ?', :method => :delete
+      
+%p= link_to "Nouvel utilisateur", new_user_path

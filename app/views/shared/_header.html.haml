@@ -1,4 +1,11 @@
 #title
   = link_to "Photon", root_path
-#links
-  .link= link_to t(:header_tab_home), root_path
+#links.clearfix
+  %ul
+    %li= link_to t(:header_tab_home), root_path
+    - if current_user
+      %li= link_to t(:header_tab_account), edit_user_path(current_user)
+      %li= link_to t(:header_tab_logout), logout_path
+    - else
+      %li= link_to t(:header_tab_login), login_path
+      %li= link_to t(:header_tab_register), new_user_path

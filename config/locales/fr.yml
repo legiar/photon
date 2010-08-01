@@ -9,6 +9,10 @@ fr:
   users_delete_ok: "Utilisateur supprimé avec succès."
   
   header_tab_home: "Accueil"
+  header_tab_account: "Préferences"
+  header_tab_login: "Se connecter"
+  header_tab_logout: "Se déconnecter"
+  header_tab_register: "S'enregistrer"
   
   application_name: "Photon"
   
