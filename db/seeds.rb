@@ -6,17 +6,18 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
-#require "declarative_authorization/maintenance"  # => TODO
-#Authorization::Maintenance::without_access_control do 
+require "declarative_authorization/maintenance"
+Authorization::Maintenance::without_access_control do 
   username = "rhaamo"
   email = "rhaamo@gruik.at"
   password = "toto"
     
   account = User.create(:email => email, :login => username, :password => password, :password_confirmation => password)
+  account.roles.create(:title => "admin")
   
   if account.valid?
     puts "Ok"
   else
     puts "Bad"
   end
-#end
+end

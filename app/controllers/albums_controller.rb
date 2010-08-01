@@ -1,5 +1,6 @@
 class AlbumsController < ApplicationController
   layout :set_layout
+  filter_resource_access
   
   def index
   end
