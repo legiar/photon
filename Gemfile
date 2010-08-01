@@ -6,24 +6,17 @@ gem 'rails', '3.0.0.beta4'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'haml'
+gem 'authlogic',    :git => 'git://github.com/odorcicd/authlogic.git',    :branch => 'rails3'
+gem 'nifty-generators'
+gem 'sanitize'
+gem 'declarative_authorization', :git => "http://github.com/stffn/declarative_authorization.git"
+gem 'chronic'
+gem 'friendly_id', '~> 3.1'
 
-# Use unicorn as the web server
-# gem 'unicorn'
+# Only for http://..../authorization_rules
+gem 'ruby_parser'
+gem 'ruby2ruby'
 
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri', '1.4.1'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for certain environments:
-# gem 'rspec', :group => :test
-# group :test do
-#   gem 'webrat'
-# end
+# Only for rails console
+gem "wirble"
