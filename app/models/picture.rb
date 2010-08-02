@@ -19,4 +19,6 @@ class Picture < ActiveRecord::Base
     ]
     validates_attachment_presence :picture
 
+    scope :processed, lambda { { :conditions => ['picture_processing = ?', false] } }
+
 end

@@ -5,6 +5,7 @@ class PicturesController < ApplicationController
   
   def index
     @album = Album.find(params[:album_id])
+    @pictures = @album.pictures.processed
   end
   
   def show
