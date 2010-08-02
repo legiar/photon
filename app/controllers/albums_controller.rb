@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
-  before_filter :set_current_user
   layout :set_layout
-  filter_resource_access
+  before_filter :require_user, :except => [:index, :show]
+  before_filter :require_admin, :except => [:index, :show]
   
   def index
     # TODO => Pagination !!!

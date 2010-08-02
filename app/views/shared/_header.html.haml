@@ -7,12 +7,12 @@
       %li
         Connected as
         = current_user.login
-        - permitted_to? :create, :albums do
+        - if current_user.role.title == "admin"
           %a{:title => "admin"} (A)
           - if action_name != "show"
             %li= link_to t(:header_tab_album_new), new_album_path
-        - permitted_to? :create, :images do
-          %li= link_to t(:header_tab_images_new), new_image_path
+          - if !["index", "new"].include? action_name
+            %li= link_to t(:header_tab_pictures_new), new_album_picture_path(@album)
       %li= link_to t(:header_tab_account), edit_user_path(current_user)
       %li= link_to t(:header_tab_logout), logout_path
     - else

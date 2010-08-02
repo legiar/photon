@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :set_current_user
-  filter_resource_access
-  
+    
   def index
     @users = User.with_permissions_to(:read)
   end

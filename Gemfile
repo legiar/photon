@@ -10,9 +10,12 @@ gem 'haml'
 gem 'authlogic',    :git => 'git://github.com/odorcicd/authlogic.git',    :branch => 'rails3'
 gem 'nifty-generators'
 gem 'sanitize'
-gem 'declarative_authorization', :git => "http://github.com/stffn/declarative_authorization.git"
 gem 'chronic'
 gem 'friendly_id', '~> 3.1'
+gem 'exifr'
+gem 'delayed_job',  :git => 'git://github.com/collectiveidea/delayed_job.git'
+gem 'delayed_paperclip', :git => 'git://github.com/jstorimer/delayed_paperclip.git', :branch => 'rails3'
+gem 'paperclip'
 
 # Only for http://..../authorization_rules
 gem 'ruby_parser'

@@ -9,12 +9,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100801213319) do
+ActiveRecord::Schema.define(:version => 20100802094842) do
 
   create_table "albums", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
+    t.string   "name",        :null => false
+    t.text     "description", :null => false
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "delayed_jobs", :force => true do |t|
+    t.integer  "priority",   :default => 0
+    t.integer  "attempts",   :default => 0
+    t.text     "handler"
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
+  create_table "pictures", :force => true do |t|
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.boolean  "picture_processing"
+    t.integer  "user_id"
+    t.integer  "album_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -3,3 +3,9 @@
     = @album.name
     \-
     = t(:application_name)
+
+- @album.pictures.each do |picture|
+  .picturesListThumb
+    %p
+      %a{:href => album_picture_path(@album, picture)}
+        = image_tag(picture.picture.url(:thumb))

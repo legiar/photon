@@ -25,6 +25,14 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def require_admin
+    if current_user.role.title != "admin"
+      flash[:notice] = t(:bad_credentials)
+      redirect_to root_path
+      return false
+    end
+  end
+  
   # store the current path location
   def store_location
     session[:return_to] = request.fullpath
@@ -40,11 +48,5 @@ class ApplicationController < ActionController::Base
     return @current_user if defined?(@current_user)
     @current_user = current_user_session && current_user_session.record
   end
-
-  protected
-  def set_current_user
-    Authorization.current_user = current_user
-  end
-  
   
 end

@@ -14,6 +14,7 @@ fr:
   header_tab_logout: "Se déconnecter"
   header_tab_register: "S'enregistrer"
   header_tab_album_new: "Nouvel album"
+  header_tab_pictures_new: "Nouvelles images"
   
   application_name: "Photon"
   
@@ -27,6 +28,8 @@ fr:
   title_users_show: "Voir l'utilisateur"
   
   title_albums_new: "Nouvel album"
+  
+  title_pictures_new: "Nouvelles images"
   
   button_save: "Sauver"
   button_add: "Ajouter"

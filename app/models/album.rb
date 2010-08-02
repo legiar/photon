@@ -1,7 +1,7 @@
 require 'sanitize'
 class Album < ActiveRecord::Base
-  using_access_control
   belongs_to :user
+  has_many :pictures, :dependent => :delete_all
   has_friendly_id :name, :use_slug => true
   before_save :project_sanitization
   validates_presence_of :name, :description
