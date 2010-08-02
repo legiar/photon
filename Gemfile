@@ -17,9 +17,6 @@ gem 'delayed_job',  :git => 'git://github.com/collectiveidea/delayed_job.git'
 gem 'delayed_paperclip', :git => 'git://github.com/jstorimer/delayed_paperclip.git', :branch => 'rails3'
 gem 'paperclip'
 
-# Only for http://..../authorization_rules
-gem 'ruby_parser'
-gem 'ruby2ruby'
 
 # Only for rails console
 gem "wirble"
