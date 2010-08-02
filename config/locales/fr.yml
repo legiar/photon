@@ -15,6 +15,7 @@ fr:
   header_tab_register: "S'enregistrer"
   header_tab_album_new: "Nouvel album"
   header_tab_pictures_new: "Nouvelles images"
+  header_tab_return_album: "Retourner a l'album"
   
   application_name: "Photon"
   

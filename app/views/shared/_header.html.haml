@@ -3,6 +3,8 @@
 #links.clearfix
   %ul
     %li= link_to t(:header_tab_home), root_path
+    - if controller_name == "pictures"
+      %li= link_to t(:header_tab_return_album), @album
     - if current_user
       %li
         Connected as

@@ -1,0 +1,11 @@
+= content_for :head do
+  %title
+    = t(:title_pictures_show)
+    \-
+    = t(:application_name)
+
+#left
+  = image_tag(@picture.picture.url(:normal))
+
+#right
+  Map etc.

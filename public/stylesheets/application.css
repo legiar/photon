@@ -50,6 +50,18 @@ html {
 	margin-top: 1em;
 }
 
+#content #main #twoColumns {
+}
+
+#content #main #twoColumns #left {
+	float: left;
+	width: 65%;
+}
+
+#content #main #twoColumns #right {
+	float: left;
+}
+
 #content #main #albumList {
 }
 
