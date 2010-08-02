@@ -19,6 +19,8 @@ class PicturesController < ApplicationController
   end
   
   def create
+    require 'pp'
+    pp params
     @album = Album.find(params[:album_id])
     params[:picture][:album] = @album
     params[:picture][:user] = current_user
