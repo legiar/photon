@@ -4,11 +4,11 @@ class Picture < ActiveRecord::Base
   
   has_attached_file :picture,
     :styles => { 
-      :large => "1024x768",
-      :medium => "500x322",
-      :normal => "640x670",
-      :small => "240x159",
-      :thumb => "100x66"
+      :large => "1024x",
+      :medium => "500x",
+      :normal => "640x",
+      :small => "240x",
+      :thumb => "100x"
     },
     :default_style => :normal
     
