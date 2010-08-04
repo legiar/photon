@@ -1,7 +1,9 @@
 class Picture < ActiveRecord::Base
   belongs_to :user
   belongs_to :album
-  
+  has_one :metadata
+  has_one :exif
+
   has_attached_file :picture,
     :styles => { 
       :large => "1024x",
@@ -19,6 +21,11 @@ class Picture < ActiveRecord::Base
     ]
     validates_attachment_presence :picture
 
+    after_create :update_exif_datas
     scope :processed, lambda { { :conditions => ['picture_processing = ?', false] } }
+
+    def update_exif_datas
+      puts "WIP"
+    end
 
 end
