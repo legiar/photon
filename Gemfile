@@ -14,9 +14,7 @@ gem 'chronic'
 gem 'friendly_id', '~> 3.1'
 gem 'exifr'
 gem 'delayed_job',  :git => 'git://github.com/collectiveidea/delayed_job.git'
-gem 'delayed_paperclip', :git => 'git://github.com/jstorimer/delayed_paperclip.git', :branch => 'rails3'
-gem 'paperclip'
-
+gem 'carrierwave', :git => 'git://github.com/jnicklas/carrierwave.git', :branch => 'master'
 
 # Only for rails console
 gem "wirble"
