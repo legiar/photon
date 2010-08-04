@@ -1,7 +1,7 @@
 require 'sanitize'
 class Album < ActiveRecord::Base
   belongs_to :user
-  has_many :pictures, :dependent => :delete_all
+  has_many :pictures, :dependent => :destroy
   has_friendly_id :name, :use_slug => true
   before_save :project_sanitization
   validates_presence_of :name

@@ -4,7 +4,7 @@ class Picture < ActiveRecord::Base
   has_one :metadata
   has_one :exif
 
-  has_attached_file :picture,
+  has_attached_file :photo,
     :styles => { 
       :large => "1024x",
       :medium => "500x",
@@ -14,12 +14,12 @@ class Picture < ActiveRecord::Base
     },
     :default_style => :normal
     
-    process_in_background :picture
+    process_in_background :photo
     
-    validates_attachment_content_type :picture, :content_type => [
+    validates_attachment_content_type :photo, :content_type => [
       "image/jpeg", "image/png", "image/gif"
     ]
-    validates_attachment_presence :picture
+    validates_attachment_presence :photo
 
     after_create :update_exif_datas
     scope :processed, lambda { { :conditions => ['picture_processing = ?', false] } }
