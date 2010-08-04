@@ -1,0 +1,11 @@
+#breadcrumb
+  - if flash[:warning] or flash[:notice]
+    - if flash[:warning]
+      .flashWarning
+    - else
+      .flashNotice
+    = flash[:warning] || flash[:notice]
+  - if Picture.processing.count > 0
+    %br
+      Picture to process:
+      = Picture.processing.count
