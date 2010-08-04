@@ -5,6 +5,8 @@
     %li= link_to t(:header_tab_home), root_path
     - if controller_name == "pictures"
       %li= link_to t(:header_tab_return_album), @album
+    - if !["index"].include? action_name
+      %li= link_to t(:header_tab_edit_album), edit_album_path(@album)
     - if current_user
       %li
         Connected as
