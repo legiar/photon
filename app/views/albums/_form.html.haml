@@ -7,15 +7,4 @@
     Description :
   %p
     = f.text_area :description, :rows => 6, :cols => 60
-  %br
-  #newPaperclipFiles
-    = f.fields_for :pictures do |picture|
-      - if picture.object.new_record?
-        = picture.file_field :photo
-  %br
-  #existingPaperclipFiiled
-    = f.fields_for :pictures do |picture|
-      - unless picture.object.new_record?
-        .thumbnail
-          = link_to( image_tag(picture.object.photo.url(:thumb)), picture.object.photo.url(:normal) )
   %p= f.submit t(:button_validate)
