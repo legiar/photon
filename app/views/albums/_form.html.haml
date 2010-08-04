@@ -12,10 +12,10 @@
     = f.fields_for :pictures do |picture|
       - if picture.object.new_record?
         = picture.file_field :photo
+  %br
   #existingPaperclipFiiled
     = f.fields_for :pictures do |picture|
       - unless picture.object.new_record?
         .thumbnail
-          = link_to( image_tag(picture.object.image.url(:thumb)), picture.object.image.url(:normal) )
-          = picture.check_box :_delete
+          = link_to( image_tag(picture.object.photo.url(:thumb)), picture.object.photo.url(:normal) )
   %p= f.submit t(:button_validate)
