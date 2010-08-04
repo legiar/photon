@@ -8,6 +8,6 @@
   .albumsListThumb
     %p
       %a{:href => album_path(album)}
-        img
+        = image_tag(album.pictures.first.photo.url(:thumb))
         %br
         %span= album.name
