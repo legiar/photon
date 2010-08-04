@@ -1,5 +1,0 @@
-= form_for [@album, @picture], :html => {:multipart => true} do |f|
-  = render "shared/error_messages", :target => @picture
-  = file_field :picture, :photo
-  = file_field :picture2, :photo
-  %p= f.submit t(:button_validate)

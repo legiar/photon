@@ -21,10 +21,11 @@ class Picture < ActiveRecord::Base
     ]
     validates_attachment_presence :photo
 
-    after_create :update_exif_datas
-    scope :processed, lambda { { :conditions => ['picture_processing = ?', false] } }
+    after_create :process_metadatas_exif
+    scope :processed, lambda { { :conditions => ['photo_processing = ?', false] } }
+    scope :processing, lambda { { :conditions => ['photo_processing = ?', true] } }
 
-    def update_exif_datas
+    def process_metadatas_exif
       puts "WIP"
     end
 

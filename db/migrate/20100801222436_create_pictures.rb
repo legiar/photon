@@ -5,7 +5,7 @@ class CreatePictures < ActiveRecord::Migration
       t.string  :photo_content_type
       t.integer :photo_file_size
       
-      t.boolean :picture_processing
+      t.boolean :photo_processing
       
       t.integer :user_id
       t.integer :album_id

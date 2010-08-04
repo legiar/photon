@@ -15,6 +15,7 @@ class AlbumsController < ApplicationController
   
   def new
     @album = Album.new
+    5.times { @album.pictures.build }
   end
   
   def create
@@ -30,6 +31,7 @@ class AlbumsController < ApplicationController
   
   def edit
     @album = Album.find(params[:id])
+    5.times { @album.pictures.build }
   end
   
   def update

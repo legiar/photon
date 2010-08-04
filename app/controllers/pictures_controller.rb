@@ -13,26 +13,6 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
   end
   
-  def new
-    @album = Album.find(params[:album_id])
-    @picture = Picture.new
-  end
-  
-  def create
-    require 'pp'
-    pp params
-    @album = Album.find(params[:album_id])
-    params[:picture][:album] = @album
-    params[:picture][:user] = current_user
-    @picture = Picture.new(params[:picture])
-    
-    if @picture.save
-      redirect_to @album
-    else
-      render :action => :new
-    end
-  end
-  
   private
   def set_layout
     l = "application"

@@ -8,4 +8,4 @@
   .picturesListThumb
     %p
       %a{:href => album_picture_path(@album, picture)}
-        = image_tag(picture.picture.url(:thumb))
+        = image_tag(picture.photo.url(:thumb))

@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(:version => 20100802173227) do
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
-    t.boolean  "picture_processing"
+    t.boolean  "photo_processing"
     t.integer  "user_id"
     t.integer  "album_id"
     t.datetime "created_at"
