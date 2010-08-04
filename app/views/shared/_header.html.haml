@@ -13,8 +13,6 @@
           %a{:title => "admin"} (A)
           - if action_name != "show"
             %li= link_to t(:header_tab_album_new), new_album_path
-          - if !["index", "new", "create"].include? action_name
-            %li= link_to t(:header_tab_pictures_new), new_album_picture_path(@album)
       %li= link_to t(:header_tab_account), edit_user_path(current_user)
       %li= link_to t(:header_tab_logout), logout_path
     - else
