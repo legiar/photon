@@ -80,6 +80,11 @@ html {
 	height: 4em;
 }
 
+#content #main #twoColumns #right #pictureInfos {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 #content #main #twoColumns #right #exif {
 }
 
@@ -106,6 +111,13 @@ html {
 }
 
 #content #main #imageList {
+}
+
+#content #main #breadcrumb {
+	border-bottom-color: #dddddd;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	margin-bottom: 5px;
 }
 
 #content #footer {
