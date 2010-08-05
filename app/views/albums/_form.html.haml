@@ -20,5 +20,6 @@
       - unless picture.object.new_record?
         .thumbnail
           = link_to( image_tag(get_picture_url(picture.object.photo, :thumb)),  get_picture_url(picture.object.photo))
+          = picture.check_box :_destroy
   %br
   %p= f.submit t(:button_validate)
