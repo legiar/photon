@@ -8,10 +8,11 @@ TODO
 
 Currently (implemented|supported):
   - Albums
-  - Multi upload \
-                  | Done via the 'Create album' or 'Edit album' pages
-  - Multi remove /
+  - Multi upload (see 1)
+  - Multi remove (see 1)
   - Exif parsing
+
+1: Done via 'Create' and 'Edit' album pages
 
 Not currently (implemented|supported):
   - GPS support for exif (parsed, converted, but not displayed with the map) -> WIP
