@@ -5,6 +5,7 @@ class CreatePictures < ActiveRecord::Migration
       t.string  :name
       
       t.boolean :photo_processing
+      t.boolean :to_process, :default => true
       
       t.integer :user_id
       t.integer :album_id

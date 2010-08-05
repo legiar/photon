@@ -32,6 +32,7 @@ class ProcessResizesJob < Struct.new(:picture_id)
       end
       
       picture.photo_processing = false
+      picture.to_process = false
       picture.save
     else
       picture.destroy if picture

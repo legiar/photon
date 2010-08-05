@@ -9,8 +9,11 @@ class Picture < ActiveRecord::Base
   after_create :create_other_sizes
   scope :processed, lambda { { :conditions => ['photo_processing = ?', false] } }
   scope :processing, lambda { { :conditions => ['photo_processing = ?', true] } }
+  scope :to_process, lambda { { :conditions => ['to_process = ?', true] } }
 
   def process_exif
+    require 'pp'
+    pp self
     file = self.photo.path
     if File.exist? file
       begin

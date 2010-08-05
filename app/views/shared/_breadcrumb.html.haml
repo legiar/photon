@@ -7,8 +7,8 @@
         - else
           .flashNotice
         = flash[:warning] || flash[:notice]
-      - if Picture.processing.count > 0
+      - if Picture.to_process.count > 0
         Pictures to process:
-        = Picture.processing.count
+        = Picture.to_process.count
       - else
         No pictures to process.

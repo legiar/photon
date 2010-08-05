@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20100802173227) do
     t.string   "photo"
     t.string   "name"
     t.boolean  "photo_processing"
+    t.boolean  "to_process",       :default => true
     t.integer  "user_id"
     t.integer  "album_id"
     t.datetime "created_at"

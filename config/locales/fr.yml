@@ -1,4 +1,18 @@
 fr:
+  activerecord:
+    errors:
+      models:
+        album:
+          attributes:
+            name:
+              blank: "est vide"
+            description:
+              blank: "est vide"
+    attributes:
+      album:
+        album: "Album"
+        description: "Description"
+        
   session_login_ok: "Connecté."
   session_login_needed: "Vous devez vous connecter."
   session_logout_ok: "Déconnecté."
