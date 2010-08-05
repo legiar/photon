@@ -11,7 +11,7 @@ module PicturesHelper
   def navigation_objects(album, photo)
     # Return three objects
     index_in_album = album.pictures.index(photo)
-    album_size = album.pictures.size
+    album_size = (album.pictures.size-1)
     pictures = album.pictures
     
     case index_in_album
