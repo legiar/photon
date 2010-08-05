@@ -80,6 +80,10 @@ html {
 	height: 4em;
 }
 
+#content #main #twoColumns #right #navigation img {
+	border: 3px solid #cccccc;
+}
+
 #content #main #twoColumns #right #pictureInfos {
 	margin-top: 1em;
 	margin-bottom: 1em;
