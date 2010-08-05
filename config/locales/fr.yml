@@ -53,6 +53,31 @@ fr:
     one: "a empéché le formulaire d'être sauvé:"
     other: "ont empéchés le formulaire d'être sauvé:"
 
+  exif:
+    flash:
+      0: "Flash did not fire.",
+      1: "Flash fired.",
+      5: "Strobe return light not detected.",
+      7: "Strobe return light detected.",
+      9: "Flash fired, compulsory flash mode",
+      13: "Flash fired, compulsory flash mode, return light not detected",
+      15: "Flash fired, compulsory flash mode, return light detected",
+      16: "Flash did not fire, compulsory flash mode",
+      24: "Flash did not fire, auto mode",
+      25: "Flash fired, auto mode",
+      29: "Flash fired, auto mode, return light not detected",
+      31: "Flash fired, auto mode, return light detected",
+      32: "No flash function",
+      65: "Flash fired, red-eye reduction mode",
+      69: "Flash fired, red-eye reduction mode, return light not detected",
+      71: "Flash fired, red-eye reduction mode, return light detected",
+      73: "Flash fired, compulsory flash mode, red-eye reduction mode",
+      77: "Flash fired, compulsory flash mode, red-eye reduction mode, return light not detected",
+      79: "Flash fired, compulsory flash mode, red-eye reduction mode, return light detected",
+      89: "Flash fired, auto mode, red-eye reduction mode",
+      93: "Flash fired, auto mode, return light not detected, red-eye reduction mode",
+      95: "Flash fired, auto mode, return light detected, red-eye reduction mode"
+
   # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
   datetime:
     distance_in_words:
