@@ -9,8 +9,7 @@
   = image_tag get_picture_url(@picture.photo, :normal)
 
 #right
-  #map
-    Map
+  = render :partial => "map"
   #navigation
     - navigation = navigation_objects(@album, @picture)
     - [0,1,2].each do |nav|
