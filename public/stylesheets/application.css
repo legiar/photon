@@ -85,6 +85,11 @@ html {
 	margin-bottom: 1em;
 }
 
+#content #main #twoColumns #right #pictureInfos #sizeList {
+	margin-left: 1em;
+	margin-top: 5px;
+}
+
 #content #main #twoColumns #right #exif {
 }
 
@@ -153,3 +158,7 @@ html {
 	display: block;
 }
 /* close commented backslash hack */
+
+.listOfPhotoSizes td {
+	width: 200px;
+}

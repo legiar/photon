@@ -1,0 +1,23 @@
+Accès direct aux differentes tailles:
+#sizeList
+  %table.listOfPhotoSizes
+    %tr
+      %td
+        &raquo; 
+        = link_to "Original", get_picture_url(@picture.photo, :original)
+      %td
+        &raquo; 
+        = link_to "Large", get_picture_url(@picture.photo, :large)
+      %td
+        &raquo; 
+        = link_to "Normal", get_picture_url(@picture.photo, :normal)
+    %tr
+      %td
+        &raquo; 
+        = link_to "Medium", get_picture_url(@picture.photo, :medium)
+      %td
+        &raquo; 
+        = link_to "Small", get_picture_url(@picture.photo, :small)
+      %td
+        &raquo; 
+        = link_to "Thumbnail", get_picture_url(@picture.photo, :thumb)
