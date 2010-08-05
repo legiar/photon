@@ -8,6 +8,10 @@ fr:
   users_update_ok: "Utilisateur mis à jour avec succès."
   users_delete_ok: "Utilisateur supprimé avec succès."
   
+  albums_create_ok: "Album créé avec succès."
+  albums_update_ok: "Album mis à jour avec succès."
+  albums_delete_ok: "Album supprimé avec succès."
+  
   header_tab_home: "Accueil"
   header_tab_account: "Préferences"
   header_tab_login: "Se connecter"

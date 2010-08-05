@@ -15,7 +15,7 @@ gem 'friendly_id', '~> 3.1'
 gem 'exifr'
 gem 'delayed_job',  :git => 'git://github.com/collectiveidea/delayed_job.git'
 gem 'carrierwave', :git => 'git://github.com/jnicklas/carrierwave.git', :branch => 'master'
-gem 'rmagick'
+gem 'quick_magick'
 
 # Only for rails console
 gem "wirble"

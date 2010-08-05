@@ -5,7 +5,7 @@
     = t(:application_name)
 
 #left
-  = image_tag(@picture.photo.url(:normal))
+  = image_tag get_picture_url(@picture.photo, :normal)
 
 #right
   #map
