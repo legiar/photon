@@ -1,0 +1,31 @@
+= t(:exif_data, :scope => [:exif])
+#exifDatas
+  = t(:image_width, :scope => [:exif])
+  = @picture.exif.width
+  %br
+  = t(:image_height, :scope => [:exif])
+  = @picture.exif.height
+  %br
+  = t(:camera_model, :scope => [:exif])
+  = @picture.exif.camera_model
+  %br
+  = t(:camera_brand, :scope => [:exif])
+  = @picture.exif.camera_brand
+  %br
+  = t(:exposure_time, :scope => [:exif])
+  = @picture.exif.exposure_time
+  %br
+  = t(:f_number, :scope => [:exif])
+  = @picture.exif.f_number
+  %br
+  = t(:iso, :scope => [:exif])
+  = @picture.exif.iso_speed_rating
+  %br
+  = t(:focale_length, :scope => [:exif])
+  = @picture.exif.focale_length
+  %br
+  = t(:picture_date, :scope => [:exif])
+  = @picture.exif.shot_date_time
+  %br
+  = t(:flash_mode, :scope => [:exif])
+  = t "mode#{@picture.exif.flash}".to_sym, :scope => [:exif, :flash]

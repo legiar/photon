@@ -37,6 +37,7 @@ fr:
   title_albums_edit: "Editer l'album"
   
   title_pictures_new: "Nouvelles images"
+  title_pictures_show: "Voir une image"
   
   button_save: "Sauver"
   button_add: "Ajouter"
@@ -54,29 +55,40 @@ fr:
     other: "ont empéchés le formulaire d'être sauvé:"
 
   exif:
+    exif_data: "Données EXIF:"
+    image_width: "Largeur:"
+    image_height: "Hauteur:"
+    camera_model: "Modele:"
+    camera_brand: "Marque:"
+    exposure_time: "Exposition:"
+    f_number: "F Number:"
+    iso: "ISO:"
+    focale_length: "Focale:"
+    picture_date: "Date de prise:"
+    flash_mode: "Flash:"
     flash:
-      0: "Flash did not fire.",
-      1: "Flash fired.",
-      5: "Strobe return light not detected.",
-      7: "Strobe return light detected.",
-      9: "Flash fired, compulsory flash mode",
-      13: "Flash fired, compulsory flash mode, return light not detected",
-      15: "Flash fired, compulsory flash mode, return light detected",
-      16: "Flash did not fire, compulsory flash mode",
-      24: "Flash did not fire, auto mode",
-      25: "Flash fired, auto mode",
-      29: "Flash fired, auto mode, return light not detected",
-      31: "Flash fired, auto mode, return light detected",
-      32: "No flash function",
-      65: "Flash fired, red-eye reduction mode",
-      69: "Flash fired, red-eye reduction mode, return light not detected",
-      71: "Flash fired, red-eye reduction mode, return light detected",
-      73: "Flash fired, compulsory flash mode, red-eye reduction mode",
-      77: "Flash fired, compulsory flash mode, red-eye reduction mode, return light not detected",
-      79: "Flash fired, compulsory flash mode, red-eye reduction mode, return light detected",
-      89: "Flash fired, auto mode, red-eye reduction mode",
-      93: "Flash fired, auto mode, return light not detected, red-eye reduction mode",
-      95: "Flash fired, auto mode, return light detected, red-eye reduction mode"
+      mode0: "Flash did not fire."
+      mode1: "Flash fired."
+      mode5: "Strobe return light not detected."
+      mode7: "Strobe return light detected."
+      mode9: "Flash fired, compulsory flash mode"
+      mode13: "Flash fired, compulsory flash mode, return light not detected"
+      mode15: "Flash fired, compulsory flash mode, return light detected"
+      mode16: "Flash did not fire, compulsory flash mode"
+      mode24: "Flash did not fire, auto mode"
+      mode25: "Flash fired, auto mode"
+      mode29: "Flash fired, auto mode, return light not detected"
+      mode31: "Flash fired, auto mode, return light detected"
+      mode32: "No flash function"
+      mode65: "Flash fired, red-eye reduction mode"
+      mode69: "Flash fired, red-eye reduction mode, return light not detected"
+      mode71: "Flash fired, red-eye reduction mode, return light detected"
+      mode73: "Flash fired, compulsory flash mode, red-eye reduction mode"
+      mode77: "Flash fired, compulsory flash mode, red-eye reduction mode, return light not detected"
+      mode79: "Flash fired, compulsory flash mode, red-eye reduction mode, return light detected"
+      mode89: "Flash fired, auto mode, red-eye reduction mode"
+      mode93: "Flash fired, auto mode, return light not detected, red-eye reduction mode"
+      mode95: "Flash fired, auto mode, return light detected, red-eye reduction mode"
 
   # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
   datetime:

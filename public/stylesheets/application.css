@@ -77,6 +77,11 @@ html {
 #content #main #twoColumns #right #exif {
 }
 
+#content #main #twoColumns #right #exif #exifDatas {
+	margin-left: 1em;
+	margin-top: 5px;
+}
+
 #content #main #albumList {
 }
 
