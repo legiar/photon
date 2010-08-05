@@ -11,12 +11,12 @@ Currently (implemented|supported):
   - Multi upload (see 1)
   - Multi remove (see 1)
   - Exif parsing
+  - Picture pagination in show pic, three by three
 
 1: Done via 'Create' and 'Edit' album pages
 
 Not currently (implemented|supported):
   - GPS support for exif (parsed, converted, but not displayed with the map) -> WIP
-  - Pagination [picture -1][current picture][picture +1] on the right bar when showing a pic
   - Choice of a picture for the Album Cover (currently the first picture)
   - User comments
 
