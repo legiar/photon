@@ -5,6 +5,7 @@
     = t(:application_name)
 
 #left
+  %span.pictureName= @picture.name
   = image_tag get_picture_url(@picture.photo, :normal)
 
 #right

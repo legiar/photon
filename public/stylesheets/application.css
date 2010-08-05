@@ -58,6 +58,12 @@ html {
 	width: 65%;
 }
 
+#content #main #twoColumns #left .pictureName {
+	font-size: 2em;
+	display: block;
+	margin-bottom: 4px;
+}
+
 #content #main #twoColumns #right {
 	float: left;
 	width: 30%;
