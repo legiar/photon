@@ -28,4 +28,4 @@
   = @picture.exif.shot_date_time
   %br
   = t(:flash_mode, :scope => [:exif])
-  = t "mode#{@picture.exif.flash}".to_sym, :scope => [:exif, :flash]
+  = t "mode#{@picture.exif.flash || 'nil'}".to_sym, :scope => [:exif, :flash]

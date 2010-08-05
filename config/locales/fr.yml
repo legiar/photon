@@ -81,6 +81,7 @@ fr:
     picture_date: "Date de prise:"
     flash_mode: "Flash:"
     flash:
+      modenil: "No"
       mode0: "Flash did not fire."
       mode1: "Flash fired."
       mode5: "Strobe return light not detected."
