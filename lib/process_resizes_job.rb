@@ -11,11 +11,11 @@ class ProcessResizesJob < Struct.new(:picture_id)
       dir = File.dirname(File.dirname(file))
       fname = File.basename(file)
       
-      [["large", 1024],
-       ["normal", 650],
-       ["medium", 500],
-       ["small", 240],
-       ["thumb", 100]].each do |size|
+      [["large", "1024x"],
+       ["normal", "650x"],
+       ["medium", "500x"],
+       ["small", "240x"],
+       ["thumb", "100x66"]].each do |size|
         s_txt = size[0]
         s_num = size[1]
         
@@ -27,8 +27,9 @@ class ProcessResizesJob < Struct.new(:picture_id)
           Dir.mkdir(fdir)
         end
         i = QuickMagick::Image.read(file).first
-        i.resize "#{s_num}x"
+        i.resize s_num
         i.save ffile
+        i = nil
       end
       
       picture.photo_processing = false

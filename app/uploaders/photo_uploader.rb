@@ -30,7 +30,9 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # Add a white list of extensions which are allowed to be uploaded,
   # for images you might use something like this:
   def extension_white_list
-    %w(jpg jpeg gif png)
+    # TODO: Add support for png and gif but adapt EXIF parsing
+    # With a column "boolean no_exif"
+    %w(jpg jpeg)
   end
 
   # Override the filename of the uploaded files
