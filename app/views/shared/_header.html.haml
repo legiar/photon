@@ -7,7 +7,8 @@
       %li= link_to t(:header_tab_return_album), @album
     - if !["index", "new", "create"].include? action_name
       - if !["users"].include? controller_name
-        %li= link_to t(:header_tab_edit_album), edit_album_path(@album)
+        - if (current_user.role.title == "admin" if current_user)
+          %li= link_to t(:header_tab_edit_album), edit_album_path(@album)
     - if current_user
       %li
         Connected as

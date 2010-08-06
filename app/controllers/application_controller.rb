@@ -25,9 +25,15 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def redirect_back_or_default(default)
+    redirect_to(session[:return_to] || default)
+    session[:return_to] = nil
+  end
+  
   def require_admin
     if current_user.role.title != "admin"
       flash[:notice] = t(:bad_credentials)
+      store_location
       redirect_to root_path
       return false
     end
