@@ -6,6 +6,9 @@ function initOpenLayerMap(lon, lat, div) {
 	origin = new OpenLayers.Geometry.Point(lon, lat);
 	
 	map = new OpenLayers.Map(div, {displayProjection: proj_4326, controls: []});
+	map.addControl(new OpenLayers.Control.MouseToolbar());
+	map.addControl(new OpenLayers.Control.ZoomPanel());
+
 	layer = new OpenLayers.Layer.OSM();
 	
 	var markers = new OpenLayers.Layer.Markers( "Markers" );
@@ -18,7 +21,7 @@ function initOpenLayerMap(lon, lat, div) {
 	
 	map.addLayer(layer);
 	map.addLayer(markers);
-	map.setCenter( new OpenLayers.LonLat(lon, lat).transform(proj_4326, proj_900913), 15);
+	map.setCenter( new OpenLayers.LonLat(lon, lat).transform(proj_4326, proj_900913), 14);
 
 
 }
