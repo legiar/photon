@@ -117,9 +117,10 @@ html {
 	border-color: #dddddd;
 	border-width: 1px;
 	width: 100px;
-	height: 100px;
 	font-size: 12px;
 	text-align: center;
+	float: left;
+	margin-right: 1em;
 }
 
 #content #main .albumsListThumb a {
@@ -127,6 +128,21 @@ html {
 }
 
 #content #main #imageList {
+}
+
+#content #main #imageList .picturesListThumb {
+	float:left;
+	font-size: 12px;
+	text-align: center;
+	margin-right: 1em;
+	border-style: solid;
+	border-color: #dddddd;
+	border-width: 1px;
+	width: 100px;
+}
+
+#content #main #imageList .picturesListThumb a {
+	text-decoration: none;
 }
 
 #content #main #breadcrumb {

@@ -9,3 +9,5 @@
     %p
       %a{:href => album_picture_path(@album, picture)}
         = image_tag get_picture_url(picture.photo, :thumb)
+        %br
+        %span= picture.name
