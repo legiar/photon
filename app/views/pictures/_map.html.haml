@@ -1,3 +1,7 @@
 - if @picture.exif.gps_latitude and @picture.exif.gps_longitude
   #map
-    Map here
+  %script{:type => "text/javascript"}
+    = "var long = #{@picture.exif.gps_longitude}"
+    = "var lati = #{@picture.exif.gps_latitude}"
+    var theDiv = 'map'
+    initOpenLayerMap(long, lati, theDiv);
