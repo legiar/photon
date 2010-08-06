@@ -12,11 +12,11 @@ Currently (implemented|supported):
   - Multi remove (see 1)
   - Exif parsing
   - Picture pagination in show pic, three by three
+  - GPS Map using OpenLayers and OSM
 
 1: Done via 'Create' and 'Edit' album pages
 
 Not currently (implemented|supported):
-  - GPS support for exif (parsed, converted, but not displayed with the map) -> WIP
   - Choice of a picture for the Album Cover (currently the first picture)
   - User comments
 
