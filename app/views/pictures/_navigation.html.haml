@@ -1,0 +1,6 @@
+- navigation = navigation_objects(@album, @picture)
+- [0,1,2].each do |nav|
+  - if navigation[nav].nil?
+  - else
+    .pictureNavigation
+      = link_to image_tag(get_picture_url(navigation[nav].photo, :thumb)), album_picture_path(@album, navigation[nav])
