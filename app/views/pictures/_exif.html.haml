@@ -6,6 +6,13 @@
   = t(:image_height, :scope => [:exif])
   = @picture.exif.height
   %br
+  - if @picture.exif.gps_latitude and @picture.exif.gps_longitude
+    = t(:longitude, :scope => [:exif])
+    = @picture.exif.gps_longitude
+    %br
+    = t(:latitude, :scope => [:exif])
+    = @picture.exif.gps_latitude
+    %br
   = t(:camera_model, :scope => [:exif])
   = @picture.exif.camera_model
   %br

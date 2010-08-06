@@ -72,6 +72,8 @@ fr:
     exif_data: "Données EXIF:"
     image_width: "Largeur:"
     image_height: "Hauteur:"
+    longitude: "Longitude:"
+    latitude: "Latitude:"
     camera_model: "Modele:"
     camera_brand: "Marque:"
     exposure_time: "Exposition:"
