@@ -7,9 +7,16 @@ class Picture < ActiveRecord::Base
 
   after_create :process_exif
   after_create :create_other_sizes
+  after_destroy :delete_other_sizes
   scope :processed, lambda { { :conditions => ['photo_processing = ?', false] } }
   scope :processing, lambda { { :conditions => ['photo_processing = ?', true] } }
   scope :to_process, lambda { { :conditions => ['to_process = ?', true] } }
+
+  def delete_other_sizes
+    # Run it in background
+    puts self.photo.path
+    Delayed::Job.enqueue ProcessDeleteOtherSizesJob.new(self.photo.path), 0, Time.at(Time.now)
+  end
 
   def process_exif
     require 'pp'

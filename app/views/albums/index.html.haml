@@ -8,6 +8,7 @@
   .albumsListThumb
     %p
       %a{:href => album_path(album)}
-        = image_tag get_picture_url(album.pictures.first.photo, :thumb)
+        - if !album.pictures.empty?
+          = image_tag get_picture_url(album.pictures.first.photo, :thumb)
         %br
         %span= album.name
