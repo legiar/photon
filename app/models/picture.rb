@@ -19,15 +19,15 @@ class Picture < ActiveRecord::Base
   end
 
   def process_exif
-    require 'pp'
-    pp self
     file = self.photo.path
     if File.exist? file
       begin
         exif = EXIFR::JPEG.new file
+      rescue
+        exif = nil
       end
+      pic_exif = self.build_exif
       if exif
-        pic_exif = self.build_exif
         pic_exif.width  = exif.width
         pic_exif.height = exif.height
         pic_exif.camera_brand = exif.make
@@ -44,9 +44,10 @@ class Picture < ActiveRecord::Base
           pic_exif.gps_latitude = calc_gps(lat) if lat
           pic_exif.gps_longitude = calc_gps(lon) if lon
         end
-        pic_exif.save
+      else
+        pic_exif.no_exif = true
       end
-
+      pic_exif.save
     else
       # WTF, srsly, delete broken record. sorry.
       self.destroy

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100802173227) do
+ActiveRecord::Schema.define(:version => 20100807074622) do
 
   create_table "albums", :force => true do |t|
     t.string   "name",        :null => false
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20100802173227) do
     t.integer  "picture_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "no_exif",          :default => false
   end
 
   create_table "pictures", :force => true do |t|

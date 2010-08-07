@@ -9,10 +9,12 @@
   = image_tag get_picture_url(@picture.photo, :normal)
 
 #right
-  = render :partial => "map"
+  - if !@picture.exif.no_exif
+    = render :partial => "map"
   #navigation
     = render :partial => "navigation"
   #pictureInfos
     = render :partial => "infos"
   #exif
-    = render :partial => "exif"
+    - if !@picture.exif.no_exif
+      = render :partial => "exif"
