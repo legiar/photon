@@ -9,10 +9,11 @@ TODO
 Currently (implemented|supported):
   - Albums
   - Multi upload (see 1)
-  - Multi remove (see 1) (only records, not pictures)
+  - Multi remove (see 1) (only records, with pictures of other sizes)
   - Exif parsing
   - Picture pagination in show pic, three by three
   - GPS Map using OpenLayers and OSM
+  - JPEG PNG and GIF image types
 
 1: Done via 'Create' and 'Edit' album pages
 
